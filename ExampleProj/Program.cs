@@ -1,9 +1,22 @@
 ﻿using System;
+using System.Text; 
 
 namespace ExampleProj
 {
     class Program
     {
+        /* 
+         La fonction principale en c# est MAIN est est présentée comme ça :
+        public static void Main(string[] args)
+        {
+            // do something
+        }
+
+        Notez qu'il y a plusieurs autres annotations. 
+         
+         */
+
+
         /*
          Si un jour vous tombez la dessus, notez que c'est mes premiers cours de c# que j'ai toppé sur UDEMY.
          Notez également que je fais beaocup de commentaires parce que ce REPO va également me servir d'anti-sèche quand j'en aurais besoin. :D
@@ -14,9 +27,9 @@ namespace ExampleProj
 
          */
 
-        /**************************************************************************************************************/
-        /*************************************** BASES ***************************************************************/
-        /************************************************************************************************************/
+        /********************************************************************************************************************/
+        /*************************************** BASES *********************************************************************/
+        /******************************************************************************************************************/
 
         /*
         static signfifie que la methode peut être appellé sans objet
@@ -37,11 +50,14 @@ namespace ExampleProj
 
 
         /*****************************************************************************************************************/
+
         /*************************************** CONDITIONS *************************************************************/
         /***************************************************************************************************************/
 
-        /* jusque la rien de novueau sauf qu'on écris les primitives en bool. Après je sais que dans c# on peut faire var complete = false par exemple
-         bool complete = false;
+        /* 
+         
+        jusque la rien de novueau sauf qu'on écris les primitives en bool. Après je sais que dans c# on peut faire var complete = false par exemple
+        bool complete = false;
         bool started = true;
         int x;
 
@@ -56,13 +72,15 @@ namespace ExampleProj
             x = 1;
         } */
 
-        /********************************************************************************************************************************************/
-        /* LOOOOOOOOOOOPSS************************************** loop  ************************************************************ LOOOOOOOOOOOPSS*/
-        /******************************************************************************************************************************************/
+        /**************************************************************************************************************/
+        /* LOOOOOOOOOOOPSS****************************** loop  ************************************** LOOOOOOOOOOOPSS*/
+        /************************************************************************************************************/
 
-        // ya du for et du while comme dans Js, les copieurs t'as vu ? houla le mec va vite et donnes pas des exemples de ouf =//
+        /* 
+         ya du for et du while comme dans Js, les copieurs t'as vu ? houla le mec va vite et donnes pas des exemples de ouf =//
 
-        /* List<string> collection = new List<string>() { "a", "b", "c" };
+        (oui c'est une liste de string, une collection, un array, un oiseau un avion ? non c'es superstring)
+        List<string> collection = new List<string>() { "a", "b", "c" };
         for (int i = 0; i < collection.Count; i++)
         {
             System.Diagnostics.Debug.WriteLine(collection[i] )
@@ -78,12 +96,12 @@ namespace ExampleProj
 
          }*/
 
+        /*************************************************************************************************************/
+        /*************************************** FUNCTIONS && METHODS  **********************************************/
+        /***********************************************************************************************************/
 
-        /****************************************************************************************************************************/
-        /*************************************** FUNCTIONS && METHODS  *************************************************************/
-        /**************************************************************************************************************************/
-
-        /* alors ça marche un peu pareil que dans le Js encore une fois, à quelques différences prés. Déjà l'écriture même de la fonction, il faut la faire précéder de void, de public, static etc. (je pense que ça viendra avec le temps assez facilement)
+        /* 
+         alors ça marche un peu pareil que dans le Js encore une fois, à quelques différences prés. Déjà l'écriture même de la fonction, il faut la faire précéder de void, de public, static etc. (je pense que ça viendra avec le temps assez facilement)
 
         PrintMessage("Hello World");
 
@@ -108,8 +126,10 @@ namespace ExampleProj
         /*
 
         /**************************************************************************************************************/
+
+        /***************************************************************************************************************/
         /*************************************** SYNTAXE DU C#  *******************************************************/
-        /**************************************************************************************************************/
+        /*************************************************************************************************************/
 
         /*
          case sensitive language : 
@@ -183,6 +203,8 @@ namespace ExampleProj
          string s2 = obj1 as string; 
 
         /*****************************************************/
+
+        /*****************************************************/
         /********** TERNAIRES *******************************/
         /***************************************************/
 
@@ -191,7 +213,6 @@ namespace ExampleProj
         les ternaires fonctionnent pareil que dans Js
          le "ternaire" "&&" fonctione avec des "??"
         */
-
 
         /*****************************************************/
         /**********  SISEOF -- TYPEOF ***********************/
@@ -267,12 +288,12 @@ namespace ExampleProj
          comme dans les autres languages, ce qui est bien, au top, c'est de ne pas les utiliser comme noms de variables t'as vu ? 
         */
 
-
         /*************************************************************************************************************************/
         /***************************************  BASIC DATA TYPES  *************************************************************/
         /***********************************************************************************************************************/
 
-        /*  (oui on fait les data types AVANT de faire tout le reste ... r/HMMMMMM 
+        /*  
+         (oui on fait les data types AVANT de faire tout le reste ... r/HMMMMMM 
 
          Les data types (lol) basiques sont : 
          - Ints :
@@ -348,7 +369,6 @@ namespace ExampleProj
         notez que les éspaces si besoin entre deux strings, quand on concatène, se fait également de la même manier : var1 + " " + var2
         */
 
-
         /********* DIFFERENCES ******** ENTRE ****************/
         /**********  STRINGS ( ͡° ͜ʖ ͡°)  ***** ET *************/
         /**************** CHAR *****************************/
@@ -379,7 +399,8 @@ namespace ExampleProj
         /**********  STRINGS ( ͡° ͜ʖ ͡°)  ** @ - $ ************/
         /**************************************************/
 
-        /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+        /* 
+         @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
          
         le @ s'appelle le verbatim identifier. Alors je ne sais pas si ça vient des marques de disquettes d'à l'époque (boom coup de ieuv) mais ça me ramène 15 ans en arrière
         donc on peut pas faire ça : string if = "hello world"; du coup on peut faire ça : string @if = "hello world"; 
@@ -394,7 +415,7 @@ namespace ExampleProj
 
         C'était mon Ted Talk
 
-          $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+         $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
         ah bha je cherche des trucs sur google pour rien. le $ pour le string est principalement utilisé pour faire un template litteral comme j'ai dit plus haut
         c'est toujours bon de réécrire les trucs alors au lieu de faire ça : 
         
@@ -500,16 +521,71 @@ namespace ExampleProj
         float percent = 0.5f
         System.Diagnostics.Debug.WriteLine(string.Format("C'est terminé à {0:P} pourcents", percent));
         --> C'est terminé à 50,00 % pourcents. C'est trop la magie t'as vu ? 
-
-
          */
+
+        /**************** STRINGBUILDER CLASS ***************/
+        /**********  STRINGS ( ͡° ͜ʖ ͡°)  *********************/
+        /**************************************************/
+
+        /* 
+        Rappels : Strings are IMMUTABLES
+        Les modifications que nous avons fait jusqu'à présent résultent en création de nouvelles strings.  
+        Si on fait mal les modifications, on va surchargre le heap et du coup aussi faire du mauvais code.
+        
+        La solution à ça c'est le StringBuilder Class
+        une class Strigbuilder permet d'avoir un string avec ses séquences mutables. 
+        C'est une class sellée et ne peut pas être subclassée. 
+         
+        Pour crée un nouveau StringBuilder faut évidement la déclarer : 
+        Par contre il vaut invoquer le System.Text; dans les using tout la haut 
+        ' using System.Text; 
+
+        -> tout simplement ... 
+        StringBuilder stringBuilder = new StringBuilder();
+        
+         public static void Main(string[] args)
+            {
+            StringBuilder stringBuilder = new StringBuilder(); // --> au aurait pu appeller stringBuilder cacahouette évidement
+            stringBuilder.Append("Hello World");
+            for(int i = 0; i <4; i++)
+            {
+                stringBuilder.Append(" Chuis content de te vois t'as vu ? ");
+            }
+            string str = stringBuilder.ToString();
+            System.Diagnostics.Debug.WriteLine(str);
+            stringBuilder.Clear(); // va vider le stringBuilder
+            str = stringBuilder.ToString();  // on réassigne str à stringBuilder et on le convertis ToString();
+            System.Diagnostics.Debug.WriteLine(str); // du coup ici on a un truc vide vu que c'est clear. FACILE
+            // dans ce systeme on n'a pas crée de nouvelles string avec le type string, on a crée un StringBuidler qui garde la même instance. 
+        }
+
+         StringBuilder sb = new StringBuilder();
+            sb.AppendLine("Hello World"); // --> appendLine rajoute un saut à la ligne du prochain objet
+            sb.AppendLine("Hello World"); // -> s'il n'y a rien en dessous ça va faire une ligne vide. 
+            System.Diagnostics.Debug.WriteLine(sb.ToString());
+
+
+        StringBuilder sb1 = new StringBuilder("Hello Monde");
+            sb1.Remove(6,5); // va topper l'index 6 et enlever 5 caractères, ici on enlève Monde
+            System.Diagnostics.Debug.WriteLine(sb1.ToString());
+
+            StringBuilder sb2 = new StringBuilder("C'est un string avec des espaces et des machins comme ça"); 
+            sb2.Replace(" ", ""); // -> ah par contre pour virer les espace dans un texte c'est plus facile qu'en Js ? :o Au lieu d'avoir un vieux text.split(" ").join("")
+            System.Diagnostics.Debug.WriteLine(sb2.ToString());
+
+
+         StringBuilder sb2 = new StringBuilder("C'est un string avec des espaces et des machins comme ça");
+            sb2.Replace(" ", ""); 
+            System.Diagnostics.Debug.WriteLine(sb2.Length.ToString()); // -> lenght va donner la longueur du StringBuilder (truc de fou non ?)
+         */
+
 
 
         public static void Main(string[] args)
         {
             // do something
+           
 
-  
         }
 
     }
