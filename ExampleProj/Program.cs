@@ -208,8 +208,42 @@ namespace ExampleProj
         // Comme dans tous les languages, C# dispose d'un paquet de noms reservés, ce sont les noms qui servent comme async await etc. 
         // comme dans les autres languages, ce qui est bien, au top, c'est de ne pas les utiliser comme noms de variables t'as vu ? 
 
+
+        /* BASIC DATA TYPES  (oui on fait les data types AVANT de faire tout le reste ... r/HMMMMMM */ 
+
+        // Les data types (lol) basiques sont : 
+        // - Ints :
+        // - Floats 
+        // - Strings
+        // - Characters
+        // - Booleans
+
+        /* Si on fait par exemple, un :
+         int example = 1; 
+        il équivaut à 
+        System.Int32 example = 1 ;
+
+        Pour faire plus en profondeur : bool équivaut à System.Boolean 
+        float équivaut à System.Single
+        int équivaut à System.Int32
+        string équivaut à System.String
+        char équivaut à System.Char
+        */ 
+
+        /* NUMBER VARIABLES */ 
+        // pour l'incrémentation c'est les ++ et les --. Enfin on connait t'as vu ? =)
+        // le préfix et le suffix fonctionent à peu près pareil ?
+        // le c# à les mêmes operateurs classiques que JS ou que le monde entier en fait. + - / *
+        // on peut faire des nombres à virugle en rajoutant un f à la fin des numéros. Genre 0.5f <-- Comme on fait dans la vie réele.
+        // quand on additionne deux floats et qu'ils donnent un entier, ça va laisser tomber la virugle de suite. Genre 0.5 et 0.5 = 1 et pas 1.0 
+
         public static void Main(string[] args)
         {
+
+            int i = 0;
+            i = 5;
+            System.Diagnostics.Debug.WriteLine(10 + 5 * 2 + 3);
+
         }
 
     }
