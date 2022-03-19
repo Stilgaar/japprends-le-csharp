@@ -407,12 +407,113 @@ namespace ExampleProj
         ah ça a été introduit en c# v6, donc c'est relativement récent. (comme pour le template string en Js au final)
          */
 
+        /****************************************************/
+        /***** SLICING *****  STRINGS ( ͡° ͜ʖ ͡°)  ************/
+        /**************** (SUBSTING) **********************/
+
+        /*
+        Slicing permet d'avoir un subsring d'un string. Quand on dit substring c'est ce qu'on peut obtenir à partir de la string de base. 
+        par exemple : String S1 = "ABC"
+        Les substrings qu'on peut en obtenir sont : 
+
+        "A"
+        "B"
+        "C"
+        "AB"
+        "BC"
+        "ABC" (obviously)
+
+        Notez qu'on ne peut pas OBTENIR (direcement en tout cas) de substring "AC" parce que ce n'est plus un slice. 
+         
+        par exemple : (qu'on verra avec différentes méthodes je suppose ?) 
+        string ex = "abc"; 
+        console.(ex.Contains("bc")); va renvoyer true
+        console.(ex.Contains("Ac")); va renvoyer false
+
+        SubString va prendre en argument la valeur de l'index à laquelle on veut commencer à prendre le string. N'oubliez pas qu'un string reste un objet avec un index
+        ici a = 0, b = 1 et c = 3. Du coup quand on écris : 
+        console.(ex.SubString(1)); il va nour renvoyer son plus beau "bc"
+
+        Dans SubString on peut aussi passer un second argument. Du coup le premier devient le point de départ. Et le second la longueur.
+        En gros ex.SubString(0,2) va nous renvoyer son plus beau "ab"
+
+         */
+
+        /****************************************************/
+        /**********  STRINGS ( ͡° ͜ʖ ͡°)  *********************/
+        /*********** ESCAPE SEQUENCIES  *******************/
+
+        /* 
+        Encore une fois c'est comme en Js
+        c'est pour faire un console.("Jeff à dit \"c'est comme dans Js\"") ib écris des \ devant les " pour qu'ils soient print et pas que le console.log se plante. 
+        Ouais je sais pour rappel dans Js on fait comme ça ("Jeff à dit 'c'est comme dans Js'") mais on a des trucs qui servent à rien ou on les a pas (HEIN CHAR)
+         
+        Si on veut que le / soit vu comme un String il faut qu'on en écrive deux fois par exemple // 
+
+        le \a va rien imprimer sur notre console mais va jouer un son. UN SON. 
+        genre en gros Console.WriteLine("\a"); va jouer un son ok ? 
+
+        le \r fait un return (un peu comme le \n ?)
+
+        le \t rajoute une espace de tabulation. (putain c'est tellement un truc de fou HIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII!!!!!!!!!!!!!!!!!!!!)
+        en plus !! EN PLUS on peut faire ça : console.("Hello \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t world") pour faire encore plus de tabulation !!
+        HIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII!!!!!!!!!!!!!!!!!!!!²²²²²
+
+         */
+
+        /**************** FORMATTING ************************/
+        /**********  STRINGS ( ͡° ͜ʖ ͡°)  *********************/
+        /**************************************************/
+
+        /* 
+        Alors c'est une methode nommé format pour qu'on indique comment on veut que le string soit display.
+        Houla houla houla. On est passé de "faut tout tapper" à "ya des truc qui se font tout seuls" en deux secondes ! Et moi qui pensait que ça allait être uppercase et ce genre de merdes.
+
+        Alors : Grosso Modo : 
+        On prends un INT : 
+        int price = 100;
+        System.Diagnostics.Debug.WriteLine(string.Format("L'item coute {0:C}", price}) et la vous vous dites WTF ? Moi aussi. 
+        donc dans le {0:C} (c'est un placeholder) on a le : 
+        0 premier arguement , price qui sera à l'index 0, le premier argumennt on l'écrirs après la virgule.
+        : est pour lui dire que c'est le 0 qu'on veut transformer. Enfin jusque la c'est normal
+        C : pour Currency, va nous transformer le code en monnaie. 
+
+        en gros ça : 
+        int price = 100;
+        System.Diagnostics.Debug.WriteLine(string.Format("L'item coute {0:C}", price})
+        Va nous print ça : 
+        L'item coute 100,00€ (ou $) ===> L'item coute 100,00 €, ho l'autre, il sait qu'il faut mettre en euro t'as vu ?
+
+        on peut donc aller plus loin dans l'exemple avec plusieurs int : 
+        int price1 = 50;
+        int price2 = 150;
+        int price3 = 200;
+        Jvais essayer de faire le truc seul !
+
+        System.Diagnostics.Debug.WriteLine(string.Format("Les Items coutent respectivement {0:C}, {2:C} et {1:C}", price1, price2, price3));
+        ah et effectivement, c'est comme ça que ça marche. Putain c'est chelou le C# quand même !!!
+        --> Les Items coutent respectivement 50,00 €, 200,00 € et 150,00 €. Miracle. 
+        
+        un autre system de string formating est le P, pour Pourcents. 
+        ça va marcher avec un float. 
+        En gros si on fait un 
+        float percent = 0.5f
+        System.Diagnostics.Debug.WriteLine(string.Format("C'est terminé à {0:P} pourcents", percent));
+        --> C'est terminé à 50,00 % pourcents. C'est trop la magie t'as vu ? 
+
+
+         */
+
+
         public static void Main(string[] args)
         {
+            // do something
 
-            
-
+  
         }
 
     }
 }
+
+
+
