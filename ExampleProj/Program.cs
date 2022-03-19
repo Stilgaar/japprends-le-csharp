@@ -1,5 +1,6 @@
 ﻿using System;
-using System.Text; 
+using System.Text;
+using System.Collections.Generic;
 
 namespace ExampleProj
 {
@@ -30,7 +31,7 @@ namespace ExampleProj
         /********************************************************************************************************************/
         /*************************************** BASES *********************************************************************/
         /******************************************************************************************************************/
-        
+
         /*
         static signfifie que la methode peut être appellé sans objet
          void signifie qu'elle n'attends pas de résultat/valeur
@@ -350,9 +351,9 @@ namespace ExampleProj
          *****************  Inserez le Gif de Mr Bean en train de copier son collègue ICI ***************** 
         */
 
-        /****************************************************/
-        /**********  STRINGS ( ͡° ͜ʖ ͡°)  *********************/
-        /**************************************************/
+        /*********************************************************************************************************/
+        /************************  STRINGS ( ͡° ͜ʖ ͡°)  ************************************************************/
+        /*******************************************************************************************************/
 
         /*
          (oui je me suis vraiment fait chier à chercher cet émoji sur google)
@@ -577,15 +578,277 @@ namespace ExampleProj
             System.Diagnostics.Debug.WriteLine(sb2.Length.ToString()); // -> lenght va donner la longueur du StringBuilder (truc de fou non ?)
          */
 
+        /**************** TRAVAILLER AVEC LES ***************/
+        /**********  STRINGS ( ͡° ͜ʖ ͡°)  *********************/
+        /********** (Oui je laisse le smiley à vie) *******/
+
+        /* 
+         Il y a deux façons donc d'initilaliser un string :
+        
+        string s1 = "";
+        ou 
+        string s2 = string.Empty; 
+         
+        s1 = "abc";
+        s1.Lenght nous donne la longueur de la String
+        s1.IndexOf("b"); va nous donner 1
+        s1.ToUpper(); => to uppercase
+        s1.ToLower(); => to lowercase
+        s1.Insert(3, "d") => insere dans la string, le premier argument est l'index ou on veut l'insérer et le second est ce que l'on veut insérer. 
+        s1.Remove(3); => retire ce qu'on indique dans l'index. ici ou on en est c'est d.
+        s1.Trim('a'); va retirer tous les a de la string. 
+        s1.Replace("bc", "cd"); va virer bc et le rempalcer par la cd (comme dans stringbuilder)
+
+        string s = "Le renard Rapide, saute au dessus du chien feignant, cette phrase n'a aucun putain de sens";
+            string[] sArray = s.Split(' '); // alors c'est censé me foutre tous les mots séparés par un espace dans un array. Mais je peux pas console.log l'array après
+            j'ai déception
+
+         */
+
+        /**************** VALIDATION **********************/
+        /**********  STRINGS ( ͡° ͜ʖ ͡°)  *********************/
+        /**************************************************/
+
+        /* 
+        
+        différentre entre string emtpy et null ? 
+        alors OUI évidement
+        notez que 
+        string s = string.Empty; à en fait une valeur. Puisqu'au final, ""; c'est une valeur. T'as gépi ? 
+        alors que 
+        string s = null; n'en a pas
+
+        Alors du coup il y a une methode super sympa en c# qui s'appelle .IsNullOrEmpty() qui permet de check ces deux paramètres en même temps.
+        Ce qui au fond est carrèment trop sympa =) Surtout pour la validation de formulaires par exemple.
+         
+        */
+
+
+        /*********************************************************************************************************/
+        /************************  BOOLEANS *********************************************************************/
+        /*******************************************************************************************************/
+
+        /*  
+        alors heu c'est oui ou non, vrai ou faux, True or False
+        HOOULA alors on peut EVENTUELLEMENT, enfin, genre. C'est FAISABLE d'assigner NULL à un BOOLEAN en c# (nique toi ?)
+
+        bool? example = null; 
+        example pourra avoir la valeur de null, true or false. OK ....
+         
+         */
+
+        /************** LOGICAL OPERATORS ******************/
+        /**********  BOOLEANS *****************************/
+        /*************************************************/
+
+        /* 
+        le ! check si c'est pas la condition. Genre 
+        bool completed = false; 
+        on peut faire un if(!completed) { do something }
+
+        Pour les && du js on a un simple & dans le c#
+        Faut que les deux trucs soient true pour qu'ils soit true. 
+        if(true & true) => true
+        if(true & false) => false
+        
+        Pour le double || de notre Js adoré il est remplacé par un | tout moche et tout simple, parce que les gens, dans le c# ils sont tristes.
+        Faut que l'un seul des deux soit true pour qu'il soit true.
+        if(true | true) => true
+        if(true | false) => true
+
+        Ah ya quand même les doubles && et les doubles ||. Mais les gens dans le c# doivent quand même être triste.
+        En gros il va checker si le premier est vrai, enfin si le premier à le resulat attendu, si oui, il passe à l'autre pour checker, sinon il laises tomber.
+         
+         */
+
+        /************** FLAG TECHNIQUE *********************/
+        /**********  BOOLEANS *****************************/
+        /*************************************************/
+
+        /* 
+        On crée un bool :
+        bool flag = false; 
+        On crée une liste d'INT. Alors pour qu'il check la class list il faut : 
+        using System.Collections.Generic; tout la haut
+        List<int> intList = new List<int>() {1,2,3};
+         
+          bool flag = false;
+            List<int> intList = new List<int>() { 1, 2, 3 };
+
+            foreach(int i in intList)
+            {
+                if(i == 3)
+                {
+                    flag = true;
+                }
+
+                if(flag)
+                {
+                    System.Diagnostics.Debug.WriteLine("On a trouvé le 3, entre nous, dans le code, je l'avais déjà vu en vrai");
+                }
+            }
+
+         */
+
+        /*********************************************************************************************************/
+        /**** NULL *** NULL ********  NULL ******* NULL *** NULL ***** NULL *********NULL****** NULL ***** NULL */
+        /*******************************************************************************************************/
+
+        /* 
+         Null signifique que le truc n'a pas de valeur. Généralement c'est pas super bon signe en c#. Notez que c'est généralement une erreure très commune de :
+        "NULL REFERENCE EXEPTION". Ce qui arrive quand on lance une fonction avec une variable qui n'a pas de valeur. 
+         On peut assigner NULL a pas mal de trucs 
+         object o = null; 
+        comme pour le boolean on peut aussi assigner du nul à d'autres types de temps en temps. 
+        bool? example = null; 
+        int? exint = null; 
+        char? exchar = null; 
+        etc etc
+         
+         */
+
+        /*********************************************************************************************************/
+        /************************  CONVERSION DE VARIABLES ******************************************************/
+        /*********** BOXING ****************************** UNBOXING ********************************************/
+
+        /* 
+        Alors RE quelques bases : 
+        - C# est un language TRES TYPé
+        - Chaque Variable à une type qui lui est associé
+        - C'est pas tous les languages qui sont strongly typed (genre dynamique) tiens on parle de Js ou de Python ? 
+         
+        * UN TYPE, peut contenir plus d'informations qu'on ne le pense. 
+        - Elle peut renseigner l'espace disque dont un type à besoin
+        - Les valeurs max et min qu'elle peut prendre
+        - ses Membres
+        - Quels types héritent de ses proprietés
+        - L'emplacement de la mémoire d'ou les variables vont venir
+        - Le type (lol) d'operations qu'on a l'autorisation de faire. 
+          
+        Tout les types que C# peut utiliser : 
+        BOOL // BYTE // SBYTE // CHAR // DECIMAL // DOUBLE // FLOAT // INT // UINT // LONG // ULONG // OBJECT // SHORT // USHORT // STRING
+
+        Notez que vous avez également des type custom : 
+        STRUCS // CLASSES // INTERFACE // ENUMS
+      
+        (rappel que dans Js, les primitives sont : BOOL // STING // NUMBER // UNDIFINED // NULL // SYMBOL (et BigInt depuis 2020)) 
+
+        N'oubliez pas que 
+        1/ L'héritages entre les variables est importante. 
+
+        2/ il y a deux types de types. Les VALUES TYPES qui contiennent déjà leurs valeurs. Comme Bool qui con tient déjà True et False et les
+        REFERENCE TYPES qui sont null de bases (quand on les appelle pas, ouais c'est compliqué non ?) et auquels ont peut assigner une valeur. (genre les autres en gros)
+
+        Alors on en reviens à nos moutons : au niveau de la conversion il y a plusieurs versions : 
+        1/ Conversion Implicites :
+         int num = 3;
+         float f = num; 
+        On a transformé l'int en float, donc le 3 devient un 3.0 tout simplement, aucun problème en gros. 
+
+        2/ Conversions Explicites :
+        float f = 1.5f;
+        int example = (int)f;
+        On dit clairement : transforme ce f en int
+
+        3/ Conversions définies par l'utilisateur :
+        On les verra plus tard ...
+        4/ Conversion avec la Helper Class :
+        On les verra plus tard ...
+
+        */
+
+        /***************************************************/
+        /**********  BOXING && UNBOXING *******************/
+        /*************************************************/
+
+        /*
+        
+        Ici on se crée un int avec la valeur de 1 (facile)
+        int example = 1;
+        object o = example; -> on va le (boxer) on l'emboiter dans un objet. ici o. 
+        int example2 = (int)o; --> ici on va l'unboxer (le déballer) en lui assignant une nouvelle valeur example2. En lui indiquant qu'on veut cast un (int) de o.
+        C'est le genre de truc memory consuming (je parle comme JCVD t'as vu ?) donc à pas utilliser à tord et a travers.
+        Bon l'exemple doit pas être cirant de veritié sur ce qu'il y a a faire ou pas faire. Mais sur des gros trucs ça doit pouvoir devenir catastrophique.
+
+         */
+
+        /***************************************************/
+        /**********  ANNONYMOUS TYPE **********************/
+        /************* DYNAMIC TYPE **********************/
+
+        /* 
+        Ah la on sait me parler !
+        C'est quand on blance son plus beau var. 
+        ANNONYMOUS (we are legion)
+        var example1 = 1;
+         
+        DYNAMIC TYPE : 
+        (c'est pour bascule en mode JavaScript)
+        dynamic example2 = 1;
+        
+         */
+
+        /***************************************************/
+        /**********  VALUE && REFERENCE TYPE **************/
+        /**************************************************/
+
+        /* 
+        Ok on deepdive dans un truc qu'on a déjà vu tout à lheure. N'oubliez pas que l'apprentissage vient de la répétition. 
+        
+        Tous les types en c# ont soit un type valeur soit un type référence. 
+        - un type valeur contient sa propre valeur en mémoire (comme bool)
+        - elle dérive de System.ValueType
+
+             public static void Main(string[] args)
+        {
+            // do something
+            int i = 200;
+            System.Diagnostics.Debug.WriteLine("1 " + i);
+            ChangeValue(i);
+            System.Diagnostics.Debug.WriteLine("2 " + i);
+        }
+
+        static void ChangeValue(int num)
+        {
+            num = 500;
+            System.Diagnostics.Debug.WriteLine("3 " + num);
+        }
+
+        --> REPONSE : 
+        1 200
+        3 500
+        2 200
+        }
+        Je trouve cet exemple complètement con. Enfin je me doutait de la réponse vu qu'on définis num dans le ChangeValue ... BREF
+        n'est stupide que la stupidité après tout. 
+
+         public static void Main(string[] args)
+        {
+            Person p = new Person();
+            p.Name = "Old Person";
+            System.Diagnostics.Debug.WriteLine("1 " + p.Name); --> va sortir un "Old Person"
+            ChangeReferenceType(p);
+            System.Diagnostics.Debug.WriteLine("2 " + p.Name); --> va sortir le "New Name"
+        }
+
+        public class Person
+        {
+            public string Name; 
+        }
+
+        static void ChangeReferenceType(Person person)
+        {
+            person.Name = "New Name";
+        }
+
+         */
+
 
 
         public static void Main(string[] args)
         {
-            // do something
-           
-
+            // do something 
         }
-
     }
 }
 
