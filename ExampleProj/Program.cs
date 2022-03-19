@@ -4,6 +4,14 @@ namespace ExampleProj
 {
     class Program
     {
+
+        // Si un jour vous tombez la dessus, notez que c'est mes premiers cours de c# que j'ai toppé sur UDEMY.
+        // Notez également que je fais beaocup de commentaires parce que ce REPO va également me servir d'anti-sèche quand j'en aurais besoin. :D
+
+        /**************************************************************************************************************/
+        /*************************************** BASES *************************************************************/
+        /**************************************************************************************************************/
+
         // static signfifie que la methode peut être appellé sans objet
         // void signifie qu'elle n'attends pas de résultat/valeur
         // Main() est le nom de la fonction elle même. Attention c# fait attention aux minuscules et aux majuscules
@@ -20,7 +28,10 @@ namespace ExampleProj
         // Console.WriteLine("Hello World");
 
 
-        // conditions :
+        /**************************************************************************************************************/
+        /*************************************** CONDITIONS *************************************************************/
+        /**************************************************************************************************************/
+
         // jusque la rien de novueau sauf qu'on écris les primitives en bool. Après je sais que dans c# on peut faire var complete = false par exemple
         /* bool complete = false;
         bool started = true;
@@ -37,7 +48,10 @@ namespace ExampleProj
             x = 1;
         } */
 
-        // Loooooooooooooooooooppps 
+        /**************************************************************************************************************/
+        /* LOOOOOOOOOOOPSS************************************** loop  ************************************************************ LOOOOOOOOOOOPSS*/
+        /**************************************************************************************************************/
+
         // ya du for et du while comme dans Js, les copieurs t'as vu ? houla le mec va vite et donnes pas des exemples de ouf =//
 
         /* List<string> collection = new List<string>() { "a", "b", "c" };
@@ -47,7 +61,7 @@ namespace ExampleProj
 
         } */
 
-        // WHile 
+        // While
         // faut dire que les boucles while et for ressemblent beaucoup au Js, comme s'ils avaient copié ? 
         /* int i = 3;
          while(i>0)
@@ -56,7 +70,11 @@ namespace ExampleProj
 
          }*/
 
-        // FUNCTIONS && METHODS 
+
+        /**************************************************************************************************************/
+        /*************************************** FUNCTIONS && METHODS  *************************************************************/
+        /**************************************************************************************************************/
+
         // alors ça marche un peu pareil que dans le Js encore une fois, à quelques différences prés. Déjà l'écriture même de la fonction, il faut la faire précéder de void, de public, static etc. (je pense que ça viendra avec le temps assez facilement)
 
         /* PrintMessage("Hello World");
@@ -69,12 +87,18 @@ namespace ExampleProj
              Console.WriteLine(message);
          } */
 
+        /****************************************************/
+        /*************** ERRORS - ERREURS  ***************/
+        /****************************************************/
+
         // LES ERREURS, ya trois types d'erreurs différentes : 
         // Syntax Error: on a écris un truc pas comme il fallait (probablement une string à la place d'un char, un array à la place d'un array etc)
         // Logic Error : Le code fait pas ce qu'on lui dit de faire (lol dans le cul ? )
         // Runtime error : Une erreur apparaissant pendant que le code se lance
 
-        // SYNAXE DU C#
+        /**************************************************************************************************************/
+        /*************************************** SYNTAXE DU C#  *************************************************************/
+        /**************************************************************************************************************/
 
         // case sensitive language : 
         // int example = 1;
@@ -92,8 +116,6 @@ namespace ExampleProj
 
 
         // C# a des attributs aux codes pour y ajouter des informations
-
-
         // on peut genre rendre un string private ? (ok) et l'appeller plus tard dans un truc public (ok ?)
         // donc dans Name on appelle la valeur de name en prennant sa valeur et on retourne la QUOI ? déjà ça devrait pas être l'inverse ? 
         // et après tout le monde détéste Js ? Fuck la planète
@@ -150,7 +172,10 @@ namespace ExampleProj
         // typeof() n'est pas vraiment beaucoup utilisé. C'est comme dans JS, ça nous donne le type. Par exemple in typeof(int) va nous donner un System.Int32 parce que c'est ce qui se passe réelement. Est ce qu'on a besoin de savoir tout réelement ? NON 
         // surtout qu'au final tout est déjà typé
 
-        //Operator Overloading
+        /**************************************************************************************************************/
+        /*************************************** OPERATOR OVERLOADING  *************************************************************/
+        /**************************************************************************************************************/
+
         // c'est pour additionner deux trucs qui ne devraient apparement PAS être additionnables ? Ou lui indiquer COMMENT additioner ces deux items. Le mystère reste mysterieux.
         // alors ça se complique un poil ^-^' 
         // on va prendre cet exemple avec la class Box. On va lui donner trois mesures. Puis lui crée une fonction pour qu'il connaisse ces mesures. 
@@ -208,8 +233,11 @@ namespace ExampleProj
         // Comme dans tous les languages, C# dispose d'un paquet de noms reservés, ce sont les noms qui servent comme async await etc. 
         // comme dans les autres languages, ce qui est bien, au top, c'est de ne pas les utiliser comme noms de variables t'as vu ? 
 
+        /**************************************************************************************************************/
+        /***************************************  BASIC DATA TYPES  *************************************************************/
+        /**************************************************************************************************************/
 
-        /* BASIC DATA TYPES  (oui on fait les data types AVANT de faire tout le reste ... r/HMMMMMM */ 
+        /*  (oui on fait les data types AVANT de faire tout le reste ... r/HMMMMMM */
 
         // Les data types (lol) basiques sont : 
         // - Ints :
@@ -228,21 +256,30 @@ namespace ExampleProj
         int équivaut à System.Int32
         string équivaut à System.String
         char équivaut à System.Char
-        */ 
+        */
 
-        /* NUMBER VARIABLES */ 
+        /****************************************************/
+        /**********  NUMBER VARIABLES && FLOATS ************/
+        /****************************************************/
+
         // pour l'incrémentation c'est les ++ et les --. Enfin on connait t'as vu ? =)
         // le préfix et le suffix fonctionent à peu près pareil ?
         // le c# à les mêmes operateurs classiques que JS ou que le monde entier en fait. + - / *
         // on peut faire des nombres à virugle en rajoutant un f à la fin des numéros. Genre 0.5f <-- Comme on fait dans la vie réele.
         // quand on additionne deux floats et qu'ils donnent un entier, ça va laisser tomber la virugle de suite. Genre 0.5 et 0.5 = 1 et pas 1.0 
 
+        //int i = 0;
+        //i = 5;
+        //    System.Diagnostics.Debug.WriteLine(10 + 5 * 2 + 3);
+
+        // Floats && Int ==> 
+        // Si on fait un (int)5.5f => l'ordinateur va juste laisser tomber tout ce qui est derrière la virugule. pas arrondir hein, faire comme si ça n'existait pas 
+        // ici il va print un joli 5
+
         public static void Main(string[] args)
         {
 
-            int i = 0;
-            i = 5;
-            System.Diagnostics.Debug.WriteLine(10 + 5 * 2 + 3);
+            
 
         }
 
