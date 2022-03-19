@@ -843,13 +843,63 @@ namespace ExampleProj
 
          */
 
+        /*********************************************************************************************************/
+        /************************ DATETIME  ********** TIMESPAN *************************************************/
+        /*******************************************************************************************************/
 
+        /* 
+         Pour checker le DateTime Class
+        Pour check le TimeSpan Class
+        Formatter des dates et des heures
+        Check l'UTC time.
+        Notez que ça a l'air de moins puer le sapin que sur Js, enfin sur Js c'est le plus gros caca qu'ils aient pondu.
+        mais ça vient surtout du fait que c'est un truc qui est la depuis 1995 
+        
+        System.Diagnostics.Debug.WriteLine(DateTime.Now); => va donner un vrai truc genre 19/03/2022 15:05:15
+
+        Sinon on fait un peu comme d'habitude pour ce genre de trucs : 
+        DateTime date = new DateTime();
+        
+        DateTime date = new DateTime(2020, 1, 19);
+        System.Diagnostics.Debug.WriteLine(date);
+        va donner :  19/01/2020 00:00:00
+        (l'heure est comme ça, vu qu'on a pas demandé l'heure en vrai)
+
+
+        TimeSpan va donner la durée depuis x temps. On peut lui appliquer différentes méthodes pour qu'il nous donne les heures, minutes etc. 
+        Maintneant je pense qu'on peut le combiner avec des DateTime pour nous donner un écart entre deux dates etc. Enfin je pense NON ? Si
+        Probablement. Qu'est ce que je dois dire ?
+
+          TimeSpan timespan = new TimeSpan(1,2,0);
+            System.Diagnostics.Debug.WriteLine(timespan.Hours); // va donner 1
+            System.Diagnostics.Debug.WriteLine(timespan.Minutes); // va donner 2
+            System.Diagnostics.Debug.WriteLine(timespan.Seconds); // va donner 0
+
+         */
+
+        /***************************************************/
+        /**********  FORMATTING TIME IN C# ****************/
+        /**************************************************/
+
+        /* 
+        On peut joliement formater les dates et les heures avec le DateTime.Now.ToString("ecrirre comment on veut la date")
+
+       J'avoue leurs trucs est quand même utilisable. N'oubliez pas qu'en Js, on a un chiffre en milisecodnes, entre maintenant et 1970. FUCK THAT SHIT
+
+       System.Diagnostics.Debug.WriteLine(DateTime.Now.ToString("MM/dd/yyyy")); // --> 03 / 19 / 2022
+       System.Diagnostics.Debug.WriteLine(DateTime.Now.ToString("dddd, dd, MMMM yyyy")); // --> samedi, 19, mars 2022
+       System.Diagnostics.Debug.WriteLine(DateTime.Now.ToString("dddd, dd, MMMM yyyy HH:mm:ss")); // -> samedi, 19, mars 2022 15:16:41 TROP CLASSE
+       System.Diagnostics.Debug.WriteLine(DateTime.Now.ToString("MM/dd/yy hh:mm tt")); // 03/19/22 03:18 en AM/PM par contre pour des raisons il me l'écris pas (je pense c'est parceque je suis en Rance)
+         
+         */
 
         public static void Main(string[] args)
         {
             // do something 
+            
+
         }
-    }
+    } 
 }
 
 
