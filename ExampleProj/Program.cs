@@ -208,8 +208,6 @@ namespace ExampleProj
         // Comme dans tous les languages, C# dispose d'un paquet de noms reservés, ce sont les noms qui servent comme async await etc. 
         // comme dans les autres languages, ce qui est bien, au top, c'est de ne pas les utiliser comme noms de variables t'as vu ? 
 
-
-        /* DATA TYPE */ 
         public static void Main(string[] args)
         {
         }
