@@ -893,11 +893,155 @@ namespace ExampleProj
          
          */
 
+        /***************************************************/
+        /**********  UTC TIME *****************************/
+        /*************************************************/
+
+        /* 
+        L'UTC sert pour l'UNIVERSAL COORDONATED TIME. C'est pour qu'on puisse pas gruger au niveau des heures, par exemple au niveau des applications. 
+         
+        System.Diagnostics.Debug.WriteLine(DateTime.Now.ToString("dddd, dd, MMMM yyyy HH:mm:ss"))
+        System.Diagnostics.Debug.WriteLine(DateTime.UtcNow.ToString("dddd, dd, MMMM yyyy HH:mm:ss"))
+        NOW dimanche, 20, mars 2022 17:52:25
+        UTCNOW dimanche, 20, mars 2022 16:52:25
+
+        On peut aussi les écrire de cette manière : 
+        System.Diagnostics.Debug.WriteLine(DateTime.Now.ToUniversalTime().ToString("dddd, dd, MMMM yyyy HH:mm:ss"));
+
+        Ou encore dans l'autre sens : 
+        System.Diagnostics.Debug.WriteLine(DateTime.UtcNow.ToLocalTime("dddd, dd, MMMM yyyy HH:mm:ss"));
+
+        Si on veut savoir la valeur de la Date (si elle est en local ou en UTC) Il y aussi une méthode pour ça : 
+        Alors la de suite je comprends pas trop à quoi elle sert parce qu'au fond ... Bha c'est écris juste avant ? =)
+        System.Diagnostics.Debug.WriteLine(DateTime.Now.Kind);
+        System.Diagnostics.Debug.WriteLine(DateTime.UtcNow.Kind);
+
+         */
+
+        /*********************************************************************************************************/
+        /************************ CONTROL FLOW STATEMENT AND LOOPS **********************************************/
+        /*******************************************************************************************************/
+
+
+        /***************************************************/
+        /**********  IF SELS IF ELSE **********************/
+        /*************************************************/
+
+        /* 
+        Bon j'en mets pas ma main à couper, des fois qu'il y aie un null qui traine pour rien ? Bref sinon ça marche comme dans dans Js 
+         
+        Ouais donc ouais globablement c'est bha pareil
+        Bon pour le if, yen a toujours qu'un par colone (par contre ça je ne fais pas en Js me semble, enfin Js s'en cogne)
+
+        Après ya autant de "else if" qu'on veut
+
+        if(5 > 3) { console.("yes papa") }
+        else if ( 4 < 2 ) { console.("non") }
+
+        ah si on fait un truc avec deux vrais et que le premier est un if et que le second est un else if, il va s'arrêter que si le if est skip
+        spour ça que tu peux mettre deux if de suite stu veux. Mais c'est des codes blocks differents. T'as vu, trop la classe. 
+
+        le dernier de la lignée sera toujorus un petit else qui va bien. 
+
+        Ce sont les trucs qui générent le code le flow du code. Par contre s'il y en a beaucoup, ça ajoute du code spaghetti (à ralonge) pour rien.
+
+        */
+
+        /***************************************************/
+        /**********  SWITCH STATEMENTS ********************/
+        /*************************************************/
+
+        /* 
+         Bon alors encore une fois, c'est un truc qui marche de la même façon qu'en Js, du coup, bha du coup. 
+        En gros alors, oui oui c'est ça, le default etc, la même chose. 
+
+        J'adore le fait qu'il ai pris comme un exemple un truc genre "ah ça fait sale en else if et mets un truc vraiment dégeulasse en switch case aussi :D
+
+         int value = 2;
+
+            switch (value)
+            {
+             case 1:
+                     System.Diagnostics.Debug.WriteLine("1");
+                     break;
+             case 2:
+                      System.Diagnostics.Debug.WriteLine("2");
+                     break;
+            case 3:
+                     System.Diagnostics.Debug.WriteLine("3");
+                    break;
+            case 5:
+                     System.Diagnostics.Debug.WriteLine("5"); 
+                     break;
+            default:
+                    System.Diagnostics.Debug.WriteLine("Autre");
+                    break; 
+            }
+        
+         */
+
+        /***************************************************/
+        /**********  FOR LOOPS ****************************/
+        /*************************************************/
+
+        /* 
+        Bon alors, il me semble que c'est pareil que dans js ? :D
+        ah et le Lenght ici prends une majuscule, parce que pourquoi copier coller tout mais changer UN POIL pour que ce soit pareil ? Ah et le i il faut le typer aussi évidement. 
+
+        for(int i = 0; i < 5; i++){
+         System.Diagnostics.Debug.WriteLine("HELLO FUCKING WEULRD");
+        }
+
+
+        string example = "AbCdeEF";
+
+        for(int i = 0; i < example.Lenght; i++) { 
+        System.Diagnostics.Debug.WriteLine(example[i])
+        }
+         
+        On peut inverser les for loop en inversant l'odre des statements dans le for
+        for(int = example.Lenght - 1; i >= 0; i--) { 
+        System.Diagnostics.Debug.WriteLine(example[i])
+        }
+
+
+        ya une autre 'façon' d'écrire une boucle for() comme ça. Enfin j'ai plus l'impression que c'est genre comment ça fonctionne under the hood. 
+        int i = 0;
+        for(; ;)
+        { 
+        if(i < 4) { 
+        System.Diagnostics.Debug.WriteLine(i.ToString());
+        }
+        }
+
+        On peut bien évidement écrire un for loop dans un autre for loop : 
+
+        for(int i = 0; i < 5; i ++) {
+
+            for(int j = 0; j < 5; j++) {
+        
+        }
+
+        Bon la, le i tourne cinq fois, et le j tourne 25 fois (cinq fois par i au final, ouais je sais compter)
+
+        }
+
+         */
+
+
+        /* JE ME SUIS ARRÊTER LESSON 7 EPISODE 4*/ 
+
+
         public static void Main(string[] args)
         {
             // do something 
-            
 
+
+
+
+
+
+           
         }
     } 
 }
